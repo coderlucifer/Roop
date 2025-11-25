@@ -1,31 +1,44 @@
-import './Navbar.css'
+import "./Navbar.css";
+import logo from "../assets/logo.png";
 
-const navLinks = ['Women', 'Men', 'Accessories']
+import {
+  IconMenu2,
+  IconSearch,
+  IconHeart,
+  IconUser,
+} from "@tabler/icons-react";
 
 function Navbar() {
   return (
-    <header className="navbar">
-      <div className="navbar__logo-slot">
-        <span className="navbar__logo-placeholder">
-          <img src="./logo.png" alt="Roop" className="w-10 h-10" />
-        </span>
+    <header className="lux-navbar">
+
+      {/* LEFT SECTION */}
+      <div className="lux-left">
+        <button className="lux-icon-btn">
+          <IconMenu2 size={22} />
+        </button>
+
+        <div className="lux-text-icon">
+          <IconSearch size={20} />
+          <span>Search</span>
+        </div>
       </div>
 
-      <nav className="navbar__links" aria-label="Primary">
-        {navLinks.map((link) => (
-          <a key={link} href="#">
-            {link}
-          </a>
-        ))}
-      </nav>
-
-      <div className="navbar__actions">
-        <button className="btn ghost">Sign in</button>
-        <button className="btn solid">Shop now</button>
+      {/* CENTER LOGO */}
+      <div className="lux-center">
+        <img src={logo} alt="Roop logo" className="lux-logo" />
       </div>
+
+      {/* RIGHT SECTION */}
+      <div className="lux-right">
+        <span className="lux-call">Call Us</span>
+        <IconHeart size={22} stroke={1.5} className="lux-icon" />
+        <IconUser size={22} stroke={1.5} className="lux-icon" />
+      </div>
+
     </header>
-  )
+    
+  );
 }
 
-export default Navbar
-
+export default Navbar;
