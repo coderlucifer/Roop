@@ -1,20 +1,16 @@
-/* NAVBAR BASE */
-/* NAVBAR BASE */
+
 .lux-navbar {
-  position: fixed;            /* stick at top */
+  position: fixed;         
   top: 0;
   left: 0;
   width: 100%;
-
   padding: 0.8rem 3rem;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-
-  background: transparent;     /* fully transparent */
+  background: transparent;     
   transition: background 0.3s ease, backdrop-filter 0.3s ease;
-
-  z-index: 100;                /* stays above video */
+  z-index: 100;               
 }
 
 /* ON HOVER → LV STYLE GLASS EFFECT */
@@ -23,6 +19,12 @@
   backdrop-filter: blur(20px);
 }
 
+.lux-searchbar {
+  margin-left: 1rem;
+  width: 200px; /* adjust as needed */
+  display: flex;
+  align-items: center;
+}
 
 
 /* LEFT SECTION */

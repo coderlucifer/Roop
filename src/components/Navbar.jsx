@@ -1,20 +1,15 @@
+"use client";
 import "./Navbar.css";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo2.png";
+import { IconMenu2, IconSearch, IconHeart, IconUser } from "@tabler/icons-react";
 
-import {
-  IconMenu2,
-  IconSearch,
-  IconHeart,
-  IconUser,
-} from "@tabler/icons-react";
-
-function Navbar() {
+function Navbar({ setOpenLeft, setOpenRight }) {
   return (
     <header className="lux-navbar">
 
-      {/* LEFT SECTION */}
+      {/* LEFT */}
       <div className="lux-left">
-        <button className="lux-icon-btn">
+        <button className="lux-icon-btn" onClick={() => setOpenLeft(true)}>
           <IconMenu2 size={22} />
         </button>
 
@@ -24,20 +19,21 @@ function Navbar() {
         </div>
       </div>
 
-      {/* CENTER LOGO */}
+      {/* CENTER */}
       <div className="lux-center">
         <img src={logo} alt="Roop logo" className="lux-logo" />
       </div>
 
-      {/* RIGHT SECTION */}
+      {/* RIGHT */}
       <div className="lux-right">
-        <span className="lux-call">Call Us</span>
-        <IconHeart size={22} stroke={1.5} className="lux-icon" />
-        <IconUser size={22} stroke={1.5} className="lux-icon" />
+        <span className="lux-call" onClick={() => setOpenRight(true)}>
+          Call Us
+        </span>
+        <IconHeart size={22} />
+        <IconUser size={22} />
       </div>
 
     </header>
-    
   );
 }
 
