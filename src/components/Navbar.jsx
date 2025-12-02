@@ -1,6 +1,7 @@
 "use client";
 import "./Navbar.css";
 import logo from "../assets/logo2.png";
+import Searchbar from "./ui/searchbar.jsx";
 import { IconMenu2, IconSearch, IconHeart, IconUser } from "@tabler/icons-react";
 
 function Navbar({ setOpenLeft, setOpenRight }) {
@@ -14,8 +15,7 @@ function Navbar({ setOpenLeft, setOpenRight }) {
         </button>
 
         <div className="lux-text-icon">
-          <IconSearch size={20} />
-          <span>Search</span>
+          <Searchbar />
         </div>
       </div>
 
