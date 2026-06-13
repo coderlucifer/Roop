@@ -15,9 +15,9 @@ export default function Account() {
   if (!isAuthenticated || !user) return null;
 
   return (
-    <div className="min-h-screen bg-[#fafafa] flex flex-col items-center pt-32 px-6">
-      <div className="bg-white p-8 sm:p-12 shadow-sm border border-border w-full max-w-[600px]">
-        <h1 className="text-[1.8rem] font-serif font-medium mb-8 uppercase tracking-wider text-center">My Account</h1>
+    <div className="min-h-screen bg-[#fafafa] flex flex-col items-center pt-24 sm:pt-32 px-4 sm:px-6">
+      <div className="bg-white p-6 sm:p-8 md:p-12 shadow-sm border border-border w-full max-w-[600px]">
+        <h1 className="text-[1.4rem] sm:text-[1.8rem] font-serif font-medium mb-8 uppercase tracking-wider text-center">My Account</h1>
         
         <div className="space-y-6">
           <div className="border-b border-border pb-4">

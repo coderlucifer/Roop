@@ -3,12 +3,13 @@ import { IconCheck } from "@tabler/icons-react";
 
 export default function Success() {
   return (
-    <div className="min-h-screen bg-[#fafafa] flex items-center justify-center px-6 py-20">
-      <div className="bg-white p-12 text-center shadow-sm border border-border w-full max-w-[500px]">
-        <div className="w-20 h-20 bg-text rounded-full flex items-center justify-center mx-auto mb-8">
-          <IconCheck size={40} className="text-white" />
+    <div className="min-h-screen bg-[#fafafa] flex items-center justify-center px-4 sm:px-6 py-20">
+      <div className="bg-white p-8 sm:p-12 text-center shadow-sm border border-border w-full max-w-[500px]">
+        <div className="w-16 h-16 sm:w-20 sm:h-20 bg-text rounded-full flex items-center justify-center mx-auto mb-8">
+          <IconCheck size={32} className="text-white sm:hidden" />
+          <IconCheck size={40} className="text-white hidden sm:block" />
         </div>
-        <h1 className="text-[2rem] font-serif font-medium mb-4 uppercase tracking-wider">Order Confirmed</h1>
+        <h1 className="text-[1.5rem] sm:text-[2rem] font-serif font-medium mb-4 uppercase tracking-wider">Order Confirmed</h1>
         <p className="text-text-secondary mb-8">
           Thank you for your purchase. We've received your order and will contact you shortly with shipping details.
         </p>

@@ -9,9 +9,9 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-bg-dark text-white/80 px-[clamp(1.5rem,4vw,4rem)] pt-16 pb-8" id="footer">
-      <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-8 lg:gap-12 pb-12 border-b border-white/10">
-        <div className="flex flex-col gap-4">
+    <footer className="bg-bg-dark text-white/80 px-6 sm:px-[clamp(1.5rem,4vw,4rem)] pt-12 sm:pt-16 pb-8" id="footer">
+      <div className="max-w-[1400px] mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-8 lg:gap-12 pb-12 border-b border-white/10">
+        <div className="flex flex-col gap-4 col-span-2 sm:col-span-2 lg:col-span-1">
           <img src={logo} alt="Roop logo" className="h-10 w-auto object-contain object-left brightness-0 invert" />
           <p className="text-[0.9rem] text-white/50 m-0 max-w-[280px] leading-relaxed">
             Where tradition meets modern luxury.
@@ -58,9 +58,9 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-[1400px] mx-auto pt-8 flex flex-col md:flex-row justify-between items-center text-[0.8rem] text-white/35 gap-4 md:gap-0">
+      <div className="max-w-[1400px] mx-auto pt-8 flex flex-col sm:flex-row justify-between items-center text-[0.75rem] sm:text-[0.8rem] text-white/35 gap-4 sm:gap-0">
         <p className="m-0">© 2026 Roop. All rights reserved.</p>
-        <div className="flex gap-8">
+        <div className="flex gap-6 sm:gap-8">
           <a href="/privacy" className="text-white/35 transition-colors duration-200 hover:text-white/70">Privacy Policy</a>
           <a href="/terms" className="text-white/35 transition-colors duration-200 hover:text-white/70">Terms of Service</a>
         </div>

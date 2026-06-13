@@ -156,7 +156,7 @@ export default function Checkout() {
           Return to Shop
         </Link>
         
-        <h1 className="text-[1.8rem] font-serif font-medium mb-8 uppercase tracking-wider">Checkout</h1>
+        <h1 className="text-[1.4rem] sm:text-[1.8rem] font-serif font-medium mb-8 uppercase tracking-wider">Checkout</h1>
 
         <form onSubmit={handlePayment} className="space-y-6">
           {/* Contact */}
@@ -176,7 +176,7 @@ export default function Checkout() {
           {/* Shipping */}
           <div>
             <h2 className="text-[1.1rem] font-medium mb-4 mt-8">Shipping Address</h2>
-            <div className="grid grid-cols-2 gap-4 mb-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
               <input 
                 type="text" 
                 name="firstName"
@@ -204,7 +204,7 @@ export default function Checkout() {
               onChange={handleChange}
               className="w-full border border-border px-4 py-3 bg-transparent text-[0.95rem] outline-none focus:border-text transition-colors mb-4"
             />
-            <div className="grid grid-cols-3 gap-4 mb-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
               <input 
                 type="text" 
                 name="city"

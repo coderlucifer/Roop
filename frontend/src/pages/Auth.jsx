@@ -61,9 +61,9 @@ export default function Auth() {
   };
 
   return (
-    <div className="min-h-screen bg-[#fafafa] flex items-center justify-center px-6 py-20">
-      <div className="bg-white p-8 sm:p-12 shadow-sm border border-border w-full max-w-[450px]">
-        <h1 className="text-[1.8rem] font-serif font-medium mb-2 uppercase tracking-wider text-center">
+    <div className="min-h-screen bg-[#fafafa] flex items-center justify-center px-4 sm:px-6 py-20">
+      <div className="bg-white p-6 sm:p-8 md:p-12 shadow-sm border border-border w-full max-w-[450px]">
+        <h1 className="text-[1.4rem] sm:text-[1.8rem] font-serif font-medium mb-2 uppercase tracking-wider text-center">
           {isLogin ? "Sign In" : "Create Account"}
         </h1>
         <p className="text-center text-text-secondary text-[0.85rem] mb-8">

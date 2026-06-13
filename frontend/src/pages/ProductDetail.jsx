@@ -68,9 +68,9 @@ export default function ProductDetail() {
             </div>
           </div>
 
-          {/* ── RIGHT: PRODUCT INFO (STICKY) ── */}
+          {/* ── RIGHT: PRODUCT INFO (STICKY on desktop) ── */}
           <div className="w-full lg:w-[45%]">
-            <div className="sticky top-32">
+            <div className="lg:sticky lg:top-32">
               
               <div className="mb-8">
                 <span className="text-[0.7rem] font-semibold tracking-[0.15em] uppercase text-text-secondary mb-2 block">
@@ -119,7 +119,7 @@ export default function ProductDetail() {
                   }
                   addItem(product, selectedSize);
                 }}
-                className="w-full h-14 bg-text text-white text-[0.85rem] font-semibold tracking-[0.1em] uppercase border-none cursor-pointer transition-all duration-300 hover:bg-accent hover:-translate-y-1 hover:shadow-lg shadow-sm"
+                className="w-full h-12 sm:h-14 bg-text text-white text-[0.85rem] font-semibold tracking-[0.1em] uppercase border-none cursor-pointer transition-all duration-300 hover:bg-accent hover:-translate-y-1 hover:shadow-lg shadow-sm"
               >
                 Add to Bag
               </button>
