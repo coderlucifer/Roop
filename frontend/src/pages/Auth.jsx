@@ -29,10 +29,11 @@ export default function Auth() {
     setLoading(true);
     setError("");
 
+    const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
     const endpoint = isLogin ? "/api/auth/login" : "/api/auth/register";
     
     try {
-      const res = await fetch(`http://localhost:5000${endpoint}`, {
+      const res = await fetch(`${API_URL}${endpoint}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

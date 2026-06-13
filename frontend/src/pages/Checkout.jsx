@@ -50,7 +50,9 @@ export default function Checkout() {
     try {
       // 1. Create Order on Backend
       const amount = getCartTotal();
-      const orderRes = await fetch("http://localhost:5000/api/payment/order", {
+      const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+      
+      const orderRes = await fetch(`${API_URL}/api/payment/order`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ amount }),
@@ -65,7 +67,7 @@ export default function Checkout() {
         alert("Running in Demo Mode without Razorpay API keys. Bypassing payment gateway to simulate success!");
         
         // Save to Database as a mock verification
-        await fetch("http://localhost:5000/api/payment/verify", {
+        await fetch(`${API_URL}/api/payment/verify`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -95,7 +97,7 @@ export default function Checkout() {
         handler: async function (response) {
           // 3. Verify Payment
           try {
-            const verifyRes = await fetch("http://localhost:5000/api/payment/verify", {
+            const verifyRes = await fetch(`${API_URL}/api/payment/verify`, {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify({

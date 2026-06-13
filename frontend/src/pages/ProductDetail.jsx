@@ -11,8 +11,10 @@ export default function ProductDetail() {
   const [loading, setLoading] = useState(true);
   const { addItem } = useCartStore();
 
+  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+
   useEffect(() => {
-    fetch(`http://localhost:5000/api/products/${id}`)
+    fetch(`${API_URL}/api/products/${id}`)
       .then(res => res.json())
       .then(data => {
         setProduct(data);

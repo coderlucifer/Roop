@@ -9,8 +9,10 @@ export default function Shop() {
   const [loading, setLoading] = useState(true);
   const location = useLocation();
 
+  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+
   useEffect(() => {
-    fetch("http://localhost:5000/api/products")
+    fetch(`${API_URL}/api/products`)
       .then(res => res.json())
       .then(data => {
         setProducts(data);
