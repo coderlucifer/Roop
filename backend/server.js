@@ -57,7 +57,10 @@ app.get("/", (req, res) => {
   res.send("Roop API is running...");
 });
 
-// Start Server
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+// Start Server only locally (Vercel will import the app instead of starting it)
+if (process.env.NODE_ENV !== "production") {
+  app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+}
+
+// Export the app for Vercel Serverless
+export default app;
